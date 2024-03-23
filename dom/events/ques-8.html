@@ -1,0 +1,37 @@
+<html>
+    <head></head>
+    <body>
+        <center><h1>like and dislike button</h1></center>
+       <center><div>
+            <button onclick="inc()" style="background-color: greenyellow;margin: 10px;">like</button><span id="a1"></span>
+        </div></center>
+          <br>
+          <center><div>
+            <button onclick="anc()" style="background-color: red;margin: 10px;"> dislike</button><span id="a2"></span>
+          </div></center>
+          <script>
+            var a=0;
+            var b=0;
+            document.getElementById("a1").innerHTML=(a)
+            document.getElementById("a2").innerHTML=(b)
+
+            function inc(){
+                a++
+                document.getElementById("a1").innerHTML=(a)
+            }
+            function anc(){
+                b++
+                document.getElementById("a2").innerHTML=(b)
+            }
+
+        
+          </script>  
+           
+            
+                
+
+            
+
+        </script>
+    </body>
+</html>

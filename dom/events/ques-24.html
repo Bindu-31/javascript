@@ -1,0 +1,89 @@
+<html>
+    <head></head>
+    <body>
+        <form action="" onsubmit="save(event)">
+        <table width="50px" align="center" border="2px" >
+                
+            <tr>
+                <td><label for="fn">Full name;</label></td>
+                <td><input size="50" id="fn" type="text" name="Full name"   placeholder="enter your name"></td>
+            </tr>
+            <tr>
+                <td><label for="en">Email;</label></td>
+                <td><input size="50" id="en" type="email"  name= "email"    placeholder="enter your Email"></td>
+            </tr>
+            <tr>
+                <td><label>Gendre</label></td>
+                <td>
+                    male;<input type="radio" name="gen" value="a">
+                    female;<input type="radio" name="gen" value="f">
+                    others;<input type="radio" name="gen" value="0">
+                </td>  
+            </tr>
+            <tr>        
+                <td><label>technlogies</label></td>
+                <td>
+                    HTML;<input type="checkbox" name="techs" values="html">
+                    CSS;<input type="checkbox" name="techs" value="CSS">
+                    boostrip;<input type="checkbox" name="techs" value="bs">
+                    javascript;<input type="checkbox" name="techs" value="js">
+                    types;<input type="checkbox" name="techs" value="ts ">
+                    Angular;<input type="checkbox" name="techs" value="as">
+
+                </td>
+            </tr>
+            <tr>
+                <td><label for="">DOB</label></td>
+                <td><input type="date" name="dob"></label></td>
+            </tr>
+            <tr>
+
+                <td><label for="">password</label></td>
+                <td><input type="text" name="password"></input></td>
+            </tr>
+        <tr>
+            <td>country</td>
+            <td>
+                <select name="country" id="">
+                    <option value="india">india</option>
+                    <option value="australia">australia</option>
+                    <option value="england">england</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="">comments</label></td>
+            <td><input type="text" ></td>
+
+            
+        </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <button>save</button>
+                    
+                </td>
+            </tr>
+        </table>
+    </form>
+        <script>
+            function save(e){
+                console.log("hiii")
+                e.preventDefault();
+                var formdata=new FormData(e.target)
+                var dataobject={};
+                for(var field of formdata.entries()){
+                   var x= formdata.getAll(field[0]);
+                   if(x=length>1){
+                    dataobject[field[0]]=x;
+                   }
+                   else{
+                    dataobject[field[0]]=formdata.get(field[0])
+                   }
+                }
+                console.log(dataobject)
+
+            }
+        </script>
+
+    </body>
+</html>

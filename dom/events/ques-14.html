@@ -1,0 +1,24 @@
+<html>
+    <head></head>
+    <body>
+        <centre>
+            <h1 style="color: blueviolet;">show images by using urI</h1>
+            <span style="text-align: center;color: red;">entre image URL</span>
+            <input type="urI" ID="a1">
+            <br><br>
+            <button style="background-color: yellow;" onclick="abc()">Add images</button>
+            <div id="d1"> </div>
+        </centre>
+        <script>
+            function abc(){
+                var a=document.getElementById("a1")
+                var  b=document.getElementById("d1")
+                var  x=document.createElement("img")
+                 x.src=a.Value
+                 x.style.height="100px"
+                 x.style.width="100px"
+                 d.appendchild(x)
+            }
+        </script>
+    </body>
+</html>

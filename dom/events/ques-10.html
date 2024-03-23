@@ -1,0 +1,21 @@
+<html>
+    <head></head>
+    <body>
+       <center> <h1>change the colour by using toggle</h1></center>
+       <center><div  style="height:250px; width: 250px;border: 2px solid;  "  id="d2"></div></center> 
+       <br>
+        <center><button onclick="change()" style="background-color: orange;">toggle</button></center>
+        <script>
+            var x=document.getElementById("d2")
+            function change(){
+               if(x.style.backgroundColor==="white"){
+                x.style.backgroundColor="yellow"
+               }
+               else{
+                x.style.backgroundColor="white"
+               }
+            }
+            
+        </script>
+    </body>
+</html>

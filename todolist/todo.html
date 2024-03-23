@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo-List</title>
+</head>
+<body>
+  <input type="text" id="i1"/>
+  <button onclick="addtask()">Add</button>
+  <ul id="u1">
+
+  </ul>
+  <script>
+    y=document.getElementById("i1")
+    x=document.getElementById("u1")
+    var store=[];
+    function addtask(){
+      x.innerHTML=""
+      store.push(y.value)
+      console.log(store)
+      add(store)
+    }
+    function add(arr,ind){
+      x.innerHTML=""
+      arr.forEach(function(each){
+        var li=document.createElement("li")
+        li.innerHTML=each
+        x.appendChild(li)
+
+        var del=document.createElement("button")
+        del.innerHTML="delete"
+        x.appendChild(del)
+
+        del.onclick=function(){
+        arr.splice(ind,1)  
+        add(arr)
+
+        var undo=document.createElement("undo")
+        del.innerHTML="undo"
+        x.appendChild(undo)
+
+        undo.onclick=function(){
+          arr.splice(ind,2)
+          add(arr)
+        }
+        }
+      })
+      console.log(arr)
+      console.log(arr)
+    } 
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

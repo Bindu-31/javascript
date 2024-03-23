@@ -1,0 +1,59 @@
+<html>
+    <head></head>
+    <body>
+        <!-- <h1 id="d1">welcome to edupoly</h1> -->
+        <!-- <h1 class="a">hello</h1>
+        <h2 class="a">edupoly</h2>
+        <p class="b">training</p> -->
+        <!-- <ul>
+            <li>apple</li>
+            <li>mango</li>
+            <li>orange</li>
+        </ul> -->
+
+        <!-- <h1>edupoly</h1> -->
+        <!-- <h1>training</h1> -->
+        <h2>something</h2>
+        <ul id="d1"></ul>
+        
+<script>
+    // var x=document.getElementById("d1");
+    x.innerHTML=x.innerHTML.toUpperCase();                                                                     
+
+    // var x = document.getElementsByClassName('a');
+    // console.log(x);
+    // console.log(x[0]);
+    // for(var i=0;i<=x.length-1;i++){
+    //     console.log(x[i].innerHTML);  
+    // }
+    // console.log(Array.isArray(x));
+    // var ar=[1,2,3];
+    // console.log(ar);
+
+    // var x=document.getElementByTagName("li");
+    // // console.log(a);
+    // for(var i=0;i<=x.length-1;i++){
+    //     ar.push(x[i].innerHTML);
+
+    // }
+    // console.log(ar);
+
+    // var x=document.querySelector("h1")
+    // console.log(x)
+    // var y=document.querySelector('h1');
+    // console.log(y);
+    var z=document.querySelector("h2");
+    console.log(z.innerHTML);
+    var x=[20,34,54,56,67]
+            x.forEach(function(x){
+                var nel=document.createElement("li")
+                nel.innerHTML=x;
+                document.getElementById('d1').appendChild(nel);
+            })
+
+  
+</script>
+
+</body>
+    
+</html>

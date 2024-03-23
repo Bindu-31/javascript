@@ -1,0 +1,79 @@
+<html> 
+    <head></head>
+    <body>
+    </body>
+    <button onclick="abc()">edupoly</button>
+    <ul id="d1">
+
+    </ul>
+    <!-- <button onclick="xyz()">in put</button> -->
+    <script>
+//         function abc(){
+//             fetch ("https://restcountries.com/v3.1/all")
+//             .then(function(res){
+//                 res.json().then(function(data){
+//                     console.log(data)
+//                 })
+//             }) 
+
+// .catch(function(err){
+//     console.log(err)
+// })
+//         }
+//         function xyz(){
+//             fetch('https://fakestoreapi.com/products/1')
+//             .then(function(res){
+//                 res.json().then(function(data){
+//                     console.log(data)
+//                 })
+//             })
+//             .catch(function(err){
+//                 console.log(data)
+//             })
+
+//         }
+
+
+
+
+
+// function getProducts()
+// {
+//     var p = new Promise(function(resolve,reject){
+//         fetch("https://fakestoreapi.com/products")
+//         .then(function(res){
+//             res.json().then(function(data){
+//                 resolve(data);
+//             }).catch(function(err){
+//                 reject(data);
+//             })
+//         })
+//         .catch()
+//     })
+//     return p;
+// }
+
+
+async function getProducts()
+{
+    var res = await fetch("https://fakestoreapi.com/products");
+    var data = await res.json();
+    return data;
+}
+
+function abc()
+{
+    getProducts()
+    .then(function(prod){
+        prod.forEach(function(t){
+            var nli = document.createElement("li");
+            nli.innerHTML = t.title;
+            document.getElementById('d1').appendChild(nli);
+        })
+    })
+    .catch()
+}
+    
+
+    </script>
+</html>

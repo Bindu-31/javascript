@@ -1,0 +1,22 @@
+<html>
+    <head></head>
+    <body>
+        <div  style="height:250px; width: 250px;border: 2px solid;  " onclick="change()" id="d4"></div>
+        <script>
+            var x=document.getElementById("d4")
+                var ar=["red","pink","blue","green","purple"]
+                count=0
+                function change(){
+                    x.style.backgroundColor=ar[count]
+                    count++
+                    if(count==ar.length){
+                        count=0
+                    }
+            }
+        </script>
+        
+
+    </body>
+
+
+</html>

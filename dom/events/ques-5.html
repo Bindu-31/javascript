@@ -1,0 +1,20 @@
+<html>
+    <head></head>
+    <body>
+        <h1>toggle botton to show true/false </h1>
+        <h1 id="d5"></h1>
+        <button onclick="abc()">toggle</button><span id="a1">true</span>
+        <script>
+            var x=document.getElementById("a1")
+            function abc(){
+               if(x.innerHTML==="true"){
+                x.innerHTML="false"
+               }
+               else if(x.innerHTML==="false"){
+                x.innerHTML="true"
+               }
+              
+            }
+        </script>
+    </body>
+</html>

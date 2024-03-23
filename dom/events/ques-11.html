@@ -1,0 +1,29 @@
+<html>
+    <head></head>
+    <body>
+        <center><h1 style="text-align: center;color: brown;">show bulb on/off image using toggle button</h1></center>
+        <center><img style="height:100px;width:100px" id="i1" src="https://m.media-amazon.com/images/I/51bCZTw1HlL._AC_UF1000,1000_QL80_.jpg"</center>
+         <div>
+        <center><button  style="border:2px solid;background-color: yellow; text-align: center" id="a1"  onclick="abc()">ON</button> </center>
+         </div>
+        <script>
+            var x=document.getElementById("a1")
+            var y=document.getElementById("i1")
+            function abc(){
+                if(x.innerHTML==="OFF"){
+                    y.src="https://img.freepik.com/free-vector/light-bulb-realistic_1284-4662.jpg"
+                    x.innerHTML="ON"
+                }
+                else{
+                    y.src="https://m.media-amazon.com/images/I/51bCZTw1HlL._AC_UF1000,1000_QL80_.jpg"
+                    x.innerHTML="OFF"
+                }
+            }
+             
+
+            
+           
+            
+        </script>
+    </body>
+</html> 
